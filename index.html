@@ -1,0 +1,64 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>To-Do List — Web</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app" class="light">
+<header class="header">
+<h1>To-Do List</h1>
+<div class="header-actions">
+<button id="exportBtn" class="icon-btn" title="Export to JSON">📥</button>
+<button id="importBtn" class="icon-btn" title="Import from JSON">📤</button>
+<button id="themeToggle" class="icon-btn" title="Toggle theme">🌙</button>
+</div>
+</header>
+<main class="container">
+<aside class="sidebar">
+<div class="lists-header">
+<label for="listSelect">Lists</label>
+<button id="addListBtn" class="small">+ New</button>
+</div>
+<select id="listSelect" size="8" class="listbox"></select>
+<div class="lists-footer">
+<small id="listsCount"></small>
+</div>
+</aside>
+<section class="main-area">
+<div class="input-card" id="inputCard">
+<textarea id="taskText" placeholder="Add a task..." rows="2"></textarea>
+<div class="options">
+<div class="left">
+<label>Due
+<input id="dueDate" type="date"/>
+</label>
+<label>Priority
+<select id="priority">
+<option value="low">low</option>
+<option value="medium" selected>medium</option>
+<option value="high">high</option>
+</select>
+</label>
+</div>
+<div class="right">
+<button id="cancelBtn" class="muted">Cancel</button>
+<button id="saveBtn" class="primary">Save</button>
+</div>
+</div>
+</div>
+<div id="tasksContainer" class="tasks-container">
+<!-- tasks will be appended here -->
+</div>
+</section>
+</main>
+<footer class="footer">
+<small>Saved in browser (localStorage). You can export/import JSON via console if
+needed.</small>
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

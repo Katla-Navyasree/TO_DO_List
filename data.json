@@ -1,0 +1,13 @@
+{
+  "tasks": [
+    {
+      "_id": "t_sample1",
+      "task": "Welcome! This is a sample task",
+      "completed": false,
+      "due_date": null,
+      "created_at": "2023-10-01T00:00:00.000Z",
+      "priority": "medium"
+    }
+  ]
+}
+
